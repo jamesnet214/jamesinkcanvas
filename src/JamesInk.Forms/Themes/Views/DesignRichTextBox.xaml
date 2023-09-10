@@ -1,0 +1,12 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:based="clr-namespace:JamesInk.Support.UI.Units;assembly=JamesInk.Support"
+    xmlns:views="clr-namespace:JamesInk.Forms.UI.Views"
+    xmlns:units="clr-namespace:JamesInk.Forms.UI.Units">
+
+    <Style TargetType="{x:Type units:DesignRichTextBox}" 
+           BasedOn="{StaticResource {x:Type based:JamesRichTextBox}}">
+        <Setter Property="IsReadOnly" Value="True"/>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,31 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:based="clr-namespace:JamesInk.Support.UI.Units;assembly=JamesInk.Support"
+    xmlns:views="clr-namespace:JamesInk.Forms.UI.Views"
+    xmlns:units="clr-namespace:JamesInk.Forms.UI.Units">
+
+    <Style TargetType="{x:Type views:EditorWindow}">
+        <Setter Property="Background" Value="#BACEE0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type views:EditorWindow}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Button Content="Add InkCanvas"
+                                    Command="{Binding AddCommand}"/>
+                            <units:DesignRichTextBox Grid.Row="1" 
+                                                     ItemsSource="{Binding CanvasItems}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
